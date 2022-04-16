@@ -1,1 +1,1 @@
-/administrator-panel/delete?username=carlos
+GET /administrator-panel/delete?username=carlos HTTP/1.1
