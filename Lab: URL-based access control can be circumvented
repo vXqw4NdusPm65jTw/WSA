@@ -1,0 +1,5 @@
+GET / HTTP/1.1
+X-Original-URL: /admin
+
+GET /?username=carlos HTTP/1.1
+X-Original-URL: /admin/delete?username=carlos
