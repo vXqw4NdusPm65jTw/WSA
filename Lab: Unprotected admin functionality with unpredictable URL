@@ -1,1 +1,1 @@
-/admin-we6jc7/delete?username=carlos
+GET /admin-we6jc7/delete?username=carlos HTTP/1.1
