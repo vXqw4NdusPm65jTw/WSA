@@ -1,0 +1,11 @@
+POST /login HTTP/1.1
+
+username=§aaaaa§&password=aaaaa
+
+POST /login HTTP/1.1
+
+username=afiliados&password=§aaaaa§
+
+POST /login HTTP/1.1
+
+username=afiliados&password=zxcvbnm
