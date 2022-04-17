@@ -1,0 +1,4 @@
+POST /admin-roles HTTP/1.1
+Cookie: session=GSQjwXWixAzOGVm3ITm1s5J0vPaqJFAh
+
+action=upgrade&confirmed=true&username=wiener
