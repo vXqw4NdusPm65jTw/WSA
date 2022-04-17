@@ -1,9 +1,4 @@
 POST /login HTTP/1.1
-Cookie: session=6oevqUhX07xBUU2jFZNKXYFDRILSsMYT
-
 username=carlos&password=montoya
 
-POST /login2 HTTP/1.1
-Cookie: session=6oevqUhX07xBUU2jFZNKXYFDRILSsMYT
-
-mfa-code=§0484§
+GET /my-account HTTP/1.1
