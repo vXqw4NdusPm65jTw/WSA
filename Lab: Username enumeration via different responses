@@ -1,0 +1,7 @@
+POST /login HTTP/1.1
+
+username=§aaaaa§&password=aaaaaa
+
+POST /login HTTP/1.1
+
+username=alpha&password=§aaaaaa§
