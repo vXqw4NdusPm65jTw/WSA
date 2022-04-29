@@ -1,0 +1,12 @@
+POST /login HTTP/1.1
+
+username=wiener&password=peter
+
+GET /my-account HTTP/1.1
+Cookie: session=Tzo0OiJVc2VyIjoyOntzOjg6InVzZXJuYW1lIjtzOjY6IndpZW5lciI7czoxMjoiYWNjZXNzX3Rva2VuIjtzOjMyOiJqM2ZqYjY3ZzI1OXRjZGVqcHI4Y3d0am9lZXZhazlhaiI7fQ%3d%3d
+
+GET /libs/CustomTemplate.php HTTP/1.1
+Cookie: session=Tzo0OiJVc2VyIjoyOntzOjg6InVzZXJuYW1lIjtzOjY6IndpZW5lciI7czoxMjoiYWNjZXNzX3Rva2VuIjtzOjMyOiJqM2ZqYjY3ZzI1OXRjZGVqcHI4Y3d0am9lZXZhazlhaiI7fQ%3d%3d
+
+GET /libs/CustomTemplate.php~ HTTP/1.1
+Cookie: session=TzoxNDoiQ3VzdG9tVGVtcGxhdGUiOjE6e3M6MTQ6ImxvY2tfZmlsZV9wYXRoIjtzOjIzOiIvaG9tZS9jYXJsb3MvbW9yYWxlLnR4dCI7fQ%3d%3d
