@@ -1,0 +1,11 @@
+POST /login HTTP/1.1
+
+csrf=eZVEBHZntKREC7WXDo4wNq1URTpaQY1T&username=wiener&password=peter
+
+TRACE / HTTP/1.1
+
+GET /admin HTTP/1.1
+X-Custom-IP-Authorization: 127.0.0.1
+
+GET /admin/delete?username=carlos HTTP/1.1
+X-Custom-IP-Authorization: 127.0.0.1
