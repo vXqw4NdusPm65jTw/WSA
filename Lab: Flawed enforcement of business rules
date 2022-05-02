@@ -1,0 +1,47 @@
+POST /login HTTP/1.1
+
+csrf=x2dhtIYwC7INFkUGJFx3zxYwtP7AHUp5&username=wiener&password=peter
+
+GET /my-account HTTP/1.1
+
+POST /sign-up HTTP/1.1
+
+csrf=eLTtxcdNV53LANptm6Yo28ZanqHfk76F&email%2F=wiener%40aaaaaa
+
+GET /?sign-up-confirmed=true HTTP/1.1
+
+POST /cart/coupon HTTP/1.1
+
+csrf=eLTtxcdNV53LANptm6Yo28ZanqHfk76F&coupon=SIGNUP30
+
+POST /cart/coupon HTTP/1.1
+
+csrf=eLTtxcdNV53LANptm6Yo28ZanqHfk76F&coupon=NEWCUST5
+
+POST /cart/coupon HTTP/1.1
+
+csrf=eLTtxcdNV53LANptm6Yo28ZanqHfk76F&coupon=SIGNUP30
+
+POST /cart/coupon HTTP/1.1
+
+csrf=eLTtxcdNV53LANptm6Yo28ZanqHfk76F&coupon=NEWCUST5
+
+POST /cart/coupon HTTP/1.1
+
+csrf=eLTtxcdNV53LANptm6Yo28ZanqHfk76F&coupon=SIGNUP30
+
+POST /cart/coupon HTTP/1.1
+
+csrf=eLTtxcdNV53LANptm6Yo28ZanqHfk76F&coupon=NEWCUST5
+
+POST /cart/coupon HTTP/1.1
+
+csrf=eLTtxcdNV53LANptm6Yo28ZanqHfk76F&coupon=SIGNUP30
+
+GET /cart HTTP/1.1
+
+POST /cart/checkout HTTP/1.1
+
+csrf=eLTtxcdNV53LANptm6Yo28ZanqHfk76F
+
+GET /cart/order-confirmation?order-confirmed=true HTTP/1.1
