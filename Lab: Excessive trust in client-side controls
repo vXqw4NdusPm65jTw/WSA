@@ -1,0 +1,17 @@
+POST /login HTTP/1.1
+
+csrf=QNNuN7Khyo4mlaV9ooV6Vig2rX5zfAv4&username=wiener&password=peter
+
+GET /my-account HTTP/1.1
+
+POST /cart HTTP/1.1
+
+productId=1&redir=PRODUCT&quantity=1&price=13
+
+GET /cart HTTP/1.1
+
+POST /cart/checkout HTTP/1.1
+
+csrf=mFx9IuthclY1R0L40QIK2PjttEVGQR5n
+
+GET /cart/order-confirmation?order-confirmed=true HTTP/1.1
