@@ -1,8 +1,3 @@
-"""
-Due to difficulties in importing libraries not available on Jython such as bs4 and lack of new development of Jython for Python 3, I have decided to write this script in Python 3 rather than using Turbo Intruder.
-"""
-
-
 from bs4 import BeautifulSoup
 from html.parser import HTMLParser
 
