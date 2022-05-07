@@ -1,7 +1,33 @@
+POST /login HTTP/1.1
+
+csrf=pLUgJPQHw2kgvX76Dex955ZoREYQB38b&username=wiener&password=peter
+
+GET /my-account HTTP/1.1
+
+POST /sign-up HTTP/1.1
+
+csrf=wje2trKcAxfW4wMC9bGmC0z4ba2E5d6S&email%2F=wiener%40aaaaaa
+
+GET /?sign-up-confirmed=true HTTP/1.1
+
+POST /cart/coupon HTTP/1.1
+
+csrf=wje2trKcAxfW4wMC9bGmC0z4ba2E5d6S&coupon=SIGNUP30
+
+POST /cart/checkout HTTP/1.1
+
+csrf=wje2trKcAxfW4wMC9bGmC0z4ba2E5d6S
+
+GET /cart/order-confirmation?order-confirmed=true HTTP/1.1
+
+POST /gift-card HTTP/1.1
+
+csrf=wje2trKcAxfW4wMC9bGmC0z4ba2E5d6S&gift-card=eiX0XgJAh8
+
+
 from bs4 import BeautifulSoup
 from html.parser import HTMLParser
 
-import concurrent.futures
 import re
 import requests
 
