@@ -1,13 +1,9 @@
 POST /product/stock HTTP/1.1
-Host: 0a33004604fd7e86c0b154b800e900c4.web-security-academy.net
-Cookie: session=03sTcKVuIaP0aW34xOot41rO9siUFcEp
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
 Accept: */*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
-Referer: https://0a33004604fd7e86c0b154b800e900c4.web-security-academy.net/product?productId=1
 Content-Type: application/xml
-Origin: https://0a33004604fd7e86c0b154b800e900c4.web-security-academy.net
 Content-Length: 214
 Sec-Fetch-Dest: empty
 Sec-Fetch-Mode: cors
